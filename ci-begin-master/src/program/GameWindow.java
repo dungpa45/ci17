@@ -12,7 +12,7 @@ public class GameWindow extends JFrame {
 
     public GameWindow(){
         this.setTitle("Game Touhou");
-        this.setSize(800,600);
+//        this.setSize(800,600);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setResizable(false);
         //key
@@ -37,7 +37,7 @@ public class GameWindow extends JFrame {
             @Override
             public void keyReleased(KeyEvent e) {
                //ham dc goi khi nha phim
-                System.out.println("Key Release");
+//                System.out.println("Key Release");
                 if (e.getKeyCode()== KeyEvent.VK_W){
                     isUpPress = false;
                 }

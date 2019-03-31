@@ -2,6 +2,7 @@ package program;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by huynq on 7/4/17.
@@ -36,41 +37,26 @@ public class Program {
 //    }
 
     public static void main(String[] args) {
-//        System.out.println("Hello World");
-//        double[] result = giaiptbac2(1,2,1);
-//        if (result==null){
-//            System.out.println("Can not solve equlation");
-//        } else {
-////            for (int i=0; i<result.length;i++){
-////                System.out.println(result[i]);
-////            }
-//            int i=0;
-//            while (i < result.length){
-//                System.out.println(result[i]);
-//                i++;
-//            }
-//        }
 
-
-//        System.out.println(People.count);
-//        People person1 = new People();
-//        System.out.println(People.count);
-//        System.out.println(person1.name);
-//        System.out.println(person1.age);
-//        person1.walk();
+//        GameWindow window = new GameWindow();
 //
-//        People person2 = new People("Alex", 10);
-//        System.out.println(person2.name);
-//        System.out.println(person2.age);
-//        person2.walk();
-        GameWindow window = new GameWindow();
+//        GamePanel panel = new GamePanel();
+//        //set preference cho panel
+//        panel.setPreferredSize(new Dimension(800,600));
+//        window.add(panel);
+//        //window pack
+//        window.pack();
+//        panel.setBackground(Color.WHITE);
+//
+//        window.setVisible(true);
+//        panel.gameloop();
 
+        ArrayList<String> listString = new ArrayList<>();
 
-        GamePanel panel = new GamePanel();
-        window.add(panel);
-        panel.setBackground(Color.WHITE);
+        //listString.add() -- Dua phan tw vao mang
+        //listString.size() -- lay kich thuoc mang
+        //listString.get() -- lay phan tu
+        //listString.remove() -- xoa phan tu
 
-        window.setVisible(true);
-        panel.gameloop();
     }
 }
