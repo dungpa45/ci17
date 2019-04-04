@@ -9,6 +9,8 @@ public class GameWindow extends JFrame {
     public static boolean isLeftPress;
     public static boolean isRightPress;
     public static boolean isDownPress;
+    public static boolean isFirePress;
+    public static boolean isMegaPress;
 
     public GameWindow(){
         this.setTitle("Game Touhou");
@@ -32,6 +34,12 @@ public class GameWindow extends JFrame {
                 if (e.getKeyCode()== KeyEvent.VK_A){
                     isLeftPress = true;
                 }
+                if (e.getKeyCode()== KeyEvent.VK_SPACE){
+                    isFirePress = true;
+                }
+                if (e.getKeyCode()== KeyEvent.VK_V){
+                    isMegaPress = true;
+                }
             }
 
             @Override
@@ -49,6 +57,12 @@ public class GameWindow extends JFrame {
                 }
                 if (e.getKeyCode()== KeyEvent.VK_A){
                     isLeftPress = false;
+                }
+                if (e.getKeyCode()== KeyEvent.VK_SPACE){
+                    isFirePress = false;
+                }
+                if (e.getKeyCode()== KeyEvent.VK_V){
+                    isMegaPress = false;
                 }
             }
         });

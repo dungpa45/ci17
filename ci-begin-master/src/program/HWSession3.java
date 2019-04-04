@@ -30,11 +30,11 @@ public class HWSession3 {
      */
     public static int findTotalLength(ArrayList<String> list) {
         //TODO: bỏ return và hoàn thiện hàm
-        int totallength = 0;
+        int totalLength = 0;
         for(int i = 0; i < list.size();i++){
-            totallength += list.get(i).length();
+            totalLength += list.get(i).length();
         }
-        return totallength;
+        return totalLength;
     }
 
     public static void main(String[] args) {

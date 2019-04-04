@@ -38,20 +38,20 @@ public class Program {
 
     public static void main(String[] args) {
 
-//        GameWindow window = new GameWindow();
-//
-//        GamePanel panel = new GamePanel();
-//        //set preference cho panel
-//        panel.setPreferredSize(new Dimension(800,600));
-//        window.add(panel);
-//        //window pack
-//        window.pack();
-//        panel.setBackground(Color.WHITE);
-//
-//        window.setVisible(true);
-//        panel.gameloop();
+        GameWindow window = new GameWindow();
 
-        ArrayList<String> listString = new ArrayList<>();
+        GamePanel panel = new GamePanel();
+        //set preference cho panel
+        panel.setPreferredSize(new Dimension(800,600));
+        window.add(panel);
+        //window pack
+        window.pack();
+        panel.setBackground(Color.WHITE);
+
+        window.setVisible(true);
+        panel.gameloop();
+
+//        ArrayList<String> listString = new ArrayList<>();
 
         //listString.add() -- Dua phan tw vao mang
         //listString.size() -- lay kich thuoc mang
