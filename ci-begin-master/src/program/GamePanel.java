@@ -1,8 +1,7 @@
 package program;
-
+import program.player.Player;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class GamePanel extends JPanel {
     Background background;
@@ -17,24 +16,38 @@ public class GamePanel extends JPanel {
         player = new Player(); // HAm tao x, y
     }
 
+    static  Font font = new Font("Verdana",Font.BOLD,32);
     @Override
     public void paint(Graphics g) {
-//        super.paint(g);
-//        g.drawImage(backgroundImage,backgroundX,backgroundY,null);
-//        g.drawImage(playerImage,playerX,playerY,null);
-        background.render(g);
-        player.render(g);
+        g.setColor(Color.RED);
+        g.fillRect(0,0,Settings.GAME_WIDTH,Settings.GAME_HEIGHT);
+        g.setColor(Color.WHITE);
+        g.setFont(font);
+        g.drawString("Game hay vl",400,200);
+
+//        //GameObject.objects
+        for (int i = 0; i < GameObject.objects.size(); i++) {
+            GameObject object = GameObject.objects.get(i);
+            if(object.active){
+                object.render(g);
+            }
+
+        }
+//        background.render(g);
+//        player.render(g);//draw image
 
     }
     public void runAll(){
-        // 2. cho background troi
-//        backgroundY +=7;
-        //3. gioi han background
-//        if (backgroundY >=0){
-//            backgroundY = 0;
-//        }
-        background.run();
-        player.run();
+
+        for (int i = 0; i < GameObject.objects.size(); i++) {
+            GameObject object = GameObject.objects.get(i);
+            if(object.active){
+                object.run();
+            }
+        }
+
+//        background.run();
+//        player.run();
 
     }
 

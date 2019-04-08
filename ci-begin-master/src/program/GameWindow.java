@@ -14,7 +14,6 @@ public class GameWindow extends JFrame {
 
     public GameWindow(){
         this.setTitle("Game Touhou");
-//        this.setSize(800,600);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setResizable(false);
         //key

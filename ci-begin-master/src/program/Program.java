@@ -1,5 +1,7 @@
 package program;
 
+import program.player.Player;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -36,13 +38,43 @@ public class Program {
 //        }
 //    }
 
+//    /**
+//     * if number < 0 ->> throw exception
+//     * @param number
+//     * @throws Exception
+//     */
+//    public static void validateNum(int number)throws Exception{
+//        if(number < 0){
+//            throw new Exception("Invalid number");
+//        }else if(number < 5){
+//            throw new NumberFormatException("Number must greater than 5");
+//        }
+//        else {
+//            System.out.println("Valid number");
+//        }
+//    }
+    public static <SomeClass extends GameObject> void print(Class<SomeClass> cls){
+        // SomeClass = Player
+        System.out.println(cls);
+    }
+
     public static void main(String[] args) {
+
+//        System.out.println("Start parsing");
+//        try {
+//            validateNum(10);
+//            validateNum(5);
+//            validateNum(-100);
+//        }catch(Exception e){
+//            System.out.println(e.getMessage());
+//        }
+//        System.out.println("Validate Done");
 
         GameWindow window = new GameWindow();
 
         GamePanel panel = new GamePanel();
         //set preference cho panel
-        panel.setPreferredSize(new Dimension(800,600));
+        panel.setPreferredSize(new Dimension(Settings.GAME_WIDTH,Settings.GAME_HEIGHT));
         window.add(panel);
         //window pack
         window.pack();

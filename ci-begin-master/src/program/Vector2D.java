@@ -17,10 +17,16 @@ public class Vector2D {
         this.x += x;
         this.y += y;
     }
+    public void add(Vector2D other){
+        this.add(other.x,other.y);
+    }
 
     public void substract(double x, double y) {
         this.x -= x;
         this.y -= y;
+    }
+    public void subtract(Vector2D other){
+        this.substract(other.x,other.y);
     }
 
     public void scale(double rate){
@@ -68,6 +74,9 @@ public class Vector2D {
     public void set(double x, double y){
         this.x = x;
         this.y = y;
+    }
+    public void set(Vector2D other){
+        this.set(other.x,other.y);
     }
 
     @Override
