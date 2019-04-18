@@ -1,4 +1,5 @@
 package program;
+import program.enemy.Enemy;
 import program.player.Player;
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class GamePanel extends JPanel {
 //        backgroundY= 600-3109;
         background = new Background();
         player = new Player(); // HAm tao x, y
+        GameObject.recycle(Enemy.class);// khoi tao enemy
     }
 
     static  Font font = new Font("Verdana",Font.BOLD,32);

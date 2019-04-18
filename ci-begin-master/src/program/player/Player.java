@@ -4,6 +4,8 @@ import program.GameObject;
 import program.GameWindow;
 import program.Settings;
 import program.Vector2D;
+import program.renderer.AnimationRenderer;
+import program.renderer.SingleImageRanferer;
 import tklibs.Mathx;
 import tklibs.SpriteUtils;
 import java.awt.*;
@@ -14,7 +16,8 @@ public class Player extends GameObject {
 //    ArrayList<PlayerBullet> bullets;// replace by GameObject.object
 
     public Player() {
-        image = SpriteUtils.loadImage("assets/images/players/straight/0.png");
+        renderer = new AnimationRenderer("assets/images/players/straight");
+//        image = SpriteUtils.loadImage("assets/images/players/straight/0.png");
         position.set(Settings.PLAYER_START_X,Settings.PLAYER_START_Y);
 //        bullets = new ArrayList<>();
     }

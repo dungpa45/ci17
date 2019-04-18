@@ -1,5 +1,6 @@
 package program;
 
+import program.renderer.SingleImageRanferer;
 import tklibs.SpriteUtils;
 
 import java.awt.*;
@@ -8,7 +9,8 @@ import java.awt.image.BufferedImage;
 public class Background extends GameObject/*extend game obj*/{
 
     public Background(){
-        image = SpriteUtils.loadImage("assets/images/background/0.png");
+        renderer = new SingleImageRanferer("assets/images/background/0.png");
+//        image = SpriteUtils.loadImage("assets/images/background/0.png");
         position.set(0,Settings.GAME_HEIGHT-Settings.BACKGROUND_HEIGHT);
         velocity.set(0,Settings.BACKGROUND_SPEED);
     }
